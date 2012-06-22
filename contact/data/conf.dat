@@ -1,0 +1,18 @@
+subject<>[Vianne]Contact Form
+kaisya_name<>ヴィアンヌ
+kaisya_mail<>info@vianne.nu
+kaisya_url<>http://vianne.nu
+preview_mess<>上記の内容でよろしければ送信ボタンを押して下さい。
+send_text<>送信確認メールを送信しました。しばらくたってメールが来ない場合は、もう一度送信してください。
+send_mess<>メールを送信しました。
+error_message<>入力不備の項目がございます。記述内容をもう一度お確かめ下さい。
+error_message_no_selected<><br>未選択の項目があります。
+title_view<>入 力
+title_preview<>確 認
+title_send<>送 信
+button_edit<>編集する
+button_back<>戻る
+button_reset<>リセット
+button_send<>送信する
+zip_mark<>〒
+char_set<>Shift_JIS

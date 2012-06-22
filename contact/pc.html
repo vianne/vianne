@@ -1,0 +1,53 @@
+<?php
+$bodyId='contact-idx';
+$bodyClass='contact';
+$pageTitle='Contact';
+?>
+<!doctype html>
+
+<head id="www-sitename-com" data-template-set="html5-reset">
+<?php include('../lib/includes/head.php') ?>
+
+<link rel="stylesheet" href="/css/jqtransform.css">
+</head>
+
+<body id="<?php echo $bodyId; ?>" class="<?php echo $bodyClass; ?>">
+
+<div id="wrapper">
+
+
+
+
+<div id="main">
+
+<h1><?php echo $pageTitle; ?></h1>
+
+
+
+<form action="./" method="POST" id="m-form">
+
+<dl>
+<dt>Name:</dt>
+<dd><input type="text" name="name[0]"></dd>
+<dt>Mail:</dt>
+<dd><input type="text" name="email[0]" maxlength="100"></dd>
+<dt>Comment:</dt>
+<dd><textarea rows="4" name="youbou"></textarea></dd>
+</dl>
+
+<div class="send"><input type="submit" value="確認画面へ"> <input name="reset" type="submit" value="リセット"></div>
+</form>
+
+
+
+</div><!-- /main -->
+
+
+
+
+</div><!-- /wrapper -->
+
+<?php include('../lib/includes/scripts-footer.php') ?>
+
+</body>
+</html>

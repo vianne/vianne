@@ -1,0 +1,84 @@
+<?php
+$bodyId='gallery-idx';
+$bodyClass='gallery';
+$pageTitle='Gallery';
+
+$fileName = 'gallery.xml';
+$xml = simplexml_load_file($fileName);
+?>
+<!doctype html>
+
+<head id="www-sitename-com" data-template-set="html5-reset">
+<?php include('../lib/includes/head.php') ?>
+</head>
+
+<body id="<?php echo $bodyId; ?>" class="<?php echo $bodyClass; ?>">
+
+<div id="wrapper">
+
+<?php include('../lib/includes/header.php') ?>
+
+
+
+<div id="main">
+
+<h1><?php echo $pageTitle; ?></h1>
+
+<div id="content">
+<div id="content-inner">
+
+
+
+<div id="lv02-01">
+
+<ul id="portfolio">
+<?php
+foreach($xml->item as $item){
+	$genre = $item->genre;
+	$title = $item->title;
+	$id = $item->id;
+	$date = $item->date;
+
+	echo '<li class="'. $genre .'"><a href="/img/'. $id .'.jpg" title="'. $title .'" rel="gal" class="loupe"><img src="/img/'. $id .'_s.jpg" alt="'. $title .'"></a></li>';
+}
+?>
+</ul>
+
+</div><!-- /lv02-01 -->
+
+
+
+</div><!-- /content-inner -->
+</div><!-- /content -->
+
+
+
+<aside>
+<div id="aside-inner">
+
+<ul id="filter" class="menu">
+<li class="current"><a href="#" title="All">All</a></li>
+<li><a href="#" title="th">th</a></li>
+<li><a href="#" title="mm">mm</a></li>
+<li><a href="#" title="mk">mk</a></li>
+<li><a href="#" title="pm">pm</a></li>
+<li><a href="#" title="ori">ori</a></li>
+</ul>
+
+</div><!-- /aside-inner -->
+</aside>
+
+
+
+</div><!-- /main -->
+
+
+
+<?php include('../lib/includes/footer.php') ?>
+
+</div><!-- /wrapper -->
+
+<?php include('../lib/includes/scripts-footer.php') ?>
+
+</body>
+</html>

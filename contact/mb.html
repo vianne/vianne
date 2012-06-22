@@ -1,0 +1,151 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=Shift_JIS">
+	<title>お問い合わせ</title>
+<style type="text/css">
+<!--
+font{margin:0px;padding:0px;}
+input{margin:0px;padding:0px;font-size:12px;}
+textarea{margin:0px;padding:0px;font-size:12px;}
+strong{color:#336699;}
+dl{background:#f1f1f1;margin:0px;}
+dt{background:#f5f5f5;margin:0px;padding:1px 3px;border:1px solid #eeeeee;}
+dd{background:#ffffff;margin:0px;padding:1px 5px 5px 5px;}
+.form_title{text-align:center;color:#aa0000;padding:10px;}
+.error_message{border:1px solid #dd3300;background:#fee1e1;padding:5px;color:#dd3300;}
+.pan{color:#777777;padding:3px;text-align:center;background:#fafafa;border:1px solid #dddddd;;margin-bottom:2px;}
+-->
+</style>
+</head>
+<body bgcolor="#ffffff" text="#444444">
+<font size="1">
+<div class="midashi" align="center"><font color="#990000">お問い合わせ</font></div>
+<hr color="#dddddd" size=1>
+<!--formタグの外に書かれたテキスト等は確認画面以降も表示されます-->
+<form action="./" method="POST" id="m-form">
+<!--formタグの間に書かれたテキスト等は確認画面以降置き換えられます-->
+<hr color="#dddddd" size=1>
+<div align="right"><font color="#ff3300">*</font>マークは必須入力です</div>
+<dl>
+<dt>お使いのパソコンは？<font color="#ff3300">*</font></dt>
+<dd>
+<input type="checkbox" name="box[0]" value="ウィンドウズ">ウィンドウズ<br>
+<input type="checkbox" name="box[1]" value="マック">マック
+</dd>
+<dt>お名前<font color="#ff3300">*</font></dt>
+<dd>
+姓：<input type="text" name="name[0]" size="8"> 名：<input type="text" name="name[1]" size="8">
+</dd>
+<dt>電話番号<font color="#ff3300">*</font></dt>
+<dd><input type="text" name="tel[0]" size="5" istyle="4" mode="numeric">-<input type="text" name="tel[1]" size="5" istyle="4" mode="numeric">-<input type="text" name="tel[2]" size="5" istyle="4" mode="numeric">
+</dd>
+<dt>メールアドレス<font color="#ff3300">*</font></dt>
+<dd><input type="text" name="email[0]" size="20" maxlength="100" istyle="3" mode="alphabet"></dd>
+<dt>お住まい<font color="#ff3300">*</font></dt>
+<dd>〒<input type="text" name="zip[0]" size="4">-<input type="text" name="zip[1]" size="4"><br>
+<select name="zip[2]">
+  <option value="北海道">北海道</option>
+  <option value="青森県">青森県</option>
+  <option value="岩手県">岩手県</option>
+  <option value="宮城県">宮城県</option>
+  <option value="秋田県">秋田県</option>
+  <option value="山形県">山形県</option>
+  <option value="福島県">福島県</option>
+  <option value="茨城県">茨城県</option>
+  <option value="栃木県">栃木県</option>
+  <option value="群馬県">群馬県</option>
+  <option value="埼玉県">埼玉県</option>
+  <option value="千葉県">千葉県</option>
+  <option value="東京都">東京都</option>
+  <option value="神奈川県">神奈川県</option>
+  <option value="新潟県">新潟県</option>
+  <option value="富山県">富山県</option>
+  <option value="石川県">石川県</option>
+  <option value="福井県">福井県</option>
+  <option value="山梨県">山梨県</option>
+  <option value="長野県">長野県</option>
+  <option value="岐阜県">岐阜県</option>
+  <option value="静岡県">静岡県</option>
+  <option value="愛知県">愛知県</option>
+  <option value="三重県">三重県</option>
+  <option value="滋賀県">滋賀県</option>
+  <option value="京都府">京都府</option>
+  <option value="大阪府">大阪府</option>
+  <option value="兵庫県">兵庫県</option>
+  <option value="奈良県">奈良県</option>
+  <option value="和歌山県">和歌山県</option>
+  <option value="鳥取県">鳥取県</option>
+  <option value="島根県">島根県</option>
+  <option value="岡山県">岡山県</option>
+  <option value="広島県">広島県</option>
+  <option value="山口県">山口県</option>
+  <option value="徳島県">徳島県</option>
+  <option value="香川県">香川県</option>
+  <option value="愛媛県">愛媛県</option>
+  <option value="高知県">高知県</option>
+  <option value="福岡県">福岡県</option>
+  <option value="佐賀県">佐賀県</option>
+  <option value="長崎県">長崎県</option>
+  <option value="熊本県">熊本県</option>
+  <option value="大分県">大分県</option>
+  <option value="宮崎県">宮崎県</option>
+  <option value="鹿児島県">鹿児島県</option>
+  <option value="沖縄県">沖縄県</option>
+</select><br>
+<textarea rows="2" cols="20" name="zip[3]"></textarea>
+</dd>
+<dt>お届け希望日時</dt>
+<dd><select name="day[0]">
+<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+<option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+<option>11</option><option>12</option>
+</select>月
+<select name="day[1]">
+<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+<option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+<option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+<option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+<option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+<option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option>
+</select>日<br>
+<select name="day[2]">
+<option value="指定しない">指定しない</option>
+<option value="午前（午前中）">午前（午前中）</option>
+<option value="午後1（12:00～14:00）">午後1（12:00～14:00）</option>
+<option value="午後2（14:00～16:00）">午後2（14:00～16:00）</option>
+<option value="夕方（16:00～18:00）">夕方（16:00～18:00）</option>
+<option value="夜間1（18:00～20:00）">夜間1（18:00～20:00）</option>
+<option value="夜間2（20:00～21:00）">夜間2（20:00～21:00）</option>
+</select></dd>
+<dt>生年月日</dt>
+<dd>
+<input type="text" size="4" maxlength="8" name="born[0]" istyle="4" mode="numeric">年<input type="text" size="2" maxlength="4" name="born[1]" istyle="4" mode="numeric">月<input type="text" size="2" maxlength="4" name="born[2]" istyle="4" mode="numeric">日
+</dd>
+<dt>ご用件</dt>
+<dd>
+<select name="youken">
+<option >製品について</option>
+<option >業務内容について</option>
+<option >ご要望</option>
+<option >その他</option>
+</select>
+</dd>
+<dt>性別</dt>
+<dd>
+<input name="sex" type="radio" value="男性"> 男性　<input name="sex" type="radio" value="女性"> 女性
+</dd>
+<dt>お支払い方法</dt>
+<dd>
+<select name="shiharai">
+<option >銀行振込</option>
+<option >代金引換</option>
+</select>
+</dd>
+<dt>ご要望</dt>
+<dd><textarea rows="4" cols="20" name="youbou"></textarea></dd>
+<dd><div class="send"><input type="submit" value="確　認"> <input name="reset" type="submit" value="リセット"></div></dd>
+</dl>
+</form>
+</font>
+</body>
+</html>
